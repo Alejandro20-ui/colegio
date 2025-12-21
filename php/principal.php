@@ -240,7 +240,7 @@
             <div class="video-container-wrapper">
                 <div class="video-responsive">
                     <iframe 
-                        src="https://youtu.be/2LmVqxcDZh0?si=0KSrYmYn-1t87PuH" 
+                        src="https://www.youtube.com/embed/2LmVqxcDZh0?si=0KSrYmYn-1t87PuH" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen 
