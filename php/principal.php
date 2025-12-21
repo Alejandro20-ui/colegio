@@ -240,7 +240,7 @@
             <div class="video-container-wrapper">
                 <div class="video-responsive">
                     <iframe 
-                        src="https://www.youtube.com/embed/ID_DE_TU_VIDEO?rel=0&showinfo=0" 
+                        src="https://youtu.be/2LmVqxcDZh0?si=0KSrYmYn-1t87PuH" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen 
@@ -249,7 +249,6 @@
                 </div>
             </div>
         </section>
-
         <section id="comentarios" class="comentarios-section">
             <div class="comentarios-inner">
                 <h2>Comentarios</h2>
