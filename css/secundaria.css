@@ -1,0 +1,567 @@
+/* --- Variables CSS (Diseño Secundaria - Vanguardia y Seriedad) --- */
+:root {
+    --color-morado-oscuro: #67266c; /* Top Bar */
+    --color-principal: #8227d8;     /* Header y acento principal (institucional) */
+    --color-acento-vanguardia: #00bcd4; /* Azul Eléctrico/Cian para tecnología/énfasis */
+    --color-fondo-claro: #f8f8fa;   /* Fondo muy claro */
+    --color-fondo-oscuro: #212121;  /* Fondo oscuro para secciones especiales */
+    --color-texto-oscuro: #222;
+    --color-texto-claro: #fff;
+    
+    /* Cálculos para el padding del body (Fijos) */
+    --altura-top-bar: 40px; 
+    --altura-header: 110px;
+    --altura-fija-total: calc(var(--altura-top-bar) + var(--altura-header));
+}
+
+/* --- Estilos Globales y Reseteo --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--color-texto-oscuro);
+    line-height: 1.6;
+    background-color: var(--color-fondo-claro);
+    padding-top: var(--altura-fija-total); 
+}
+
+a {
+    color: inherit; 
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content-section {
+    padding: 60px 0;
+}
+
+h1, h2, h3 {
+    color: var(--color-principal); 
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.top-bar {
+    background: var(--color-morado-oscuro);
+    padding: 0.5rem 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    top: 0; /* Fijo arriba */
+    z-index: 1000;
+    height: var(--altura-top-bar);
+}
+        
+.top-bar a {
+    color: var(--color-texto-claro);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+        
+.top-bar a:hover {
+    opacity: 0.8;
+}
+        
+.social-icons {
+    display: flex;
+    gap: 0.8rem;
+}
+        
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    color: var(--color-texto-claro);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+        
+.social-icons a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+        
+/* --- HEADER (Fijo, debajo de Top Bar) --- */
+header {
+    background: #510488;
+    padding: 0.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: var(--altura-top-bar); /* Inicia debajo del Top Bar */
+    z-index: 999;
+    width: 100%;
+    height: var(--altura-header);
+}
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+        
+.logo-container img {
+    height: 80px;
+    width: auto;
+}
+        
+.logo-text {
+    color: var(--color-texto-claro);
+}
+        
+.logo-text h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem;
+    font-weight: 300;
+    color: var(--color-texto-claro); /* Asegura que sea blanco */
+}
+        
+.logo-text .tagline {
+    font-size: 0.75rem;
+    margin-top: 0.2rem;
+    opacity: 0.9;
+}
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+nav {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+        
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    transition: opacity 0.3s;
+    position: relative;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fbbf24;
+    transition: width 0.3s;
+}
+        
+nav a:hover::after {
+    width: 100%;
+}
+
+.dropbtn {
+    color: white;
+    padding: 10px 15px;
+    font-weight: 600;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #8227d8;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    display: none; 
+    border-radius: 0 0 5px 5px;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.hero-secundaria {
+    /* Fondo oscuro con un degradado sutil */
+    background: linear-gradient(90deg, var(--color-morado-oscuro), #4e2968); 
+    color: var(--color-texto-claro);
+    padding: 70px 20px; 
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero-secundaria h1 {
+    color: var(--color-acento-vanguardia); /* Título en azul eléctrico */
+    font-size: 3.2rem;
+    border-bottom: 3px solid var(--color-principal);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.hero-secundaria .subtitle {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    color: var(--color-texto-claro); 
+    font-weight: 300;
+}
+
+/* --- Sección Introducción y Vacantes --- */
+.vacantes-box {
+    background-color: var(--color-texto-claro);
+    /* Borde en azul eléctrico */
+    border-left: 5px solid var(--color-acento-vanguardia); 
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.vacantes-box h3 {
+    color: var(--color-principal);
+    margin-bottom: 15px;
+}
+
+.grados-disponibles {
+    font-size: 1.6rem;
+    color: var(--color-acento-vanguardia); /* Grados en azul eléctrico */
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.grados-disponibles i {
+    margin-right: 10px;
+}
+
+/* --- Programa Educativo (Feature Grid) --- */
+.secondary-bg-secundaria {
+    /* Fondo gris claro para contraste académico */
+    background-color: #ededef; 
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: var(--color-texto-claro);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    /* Borde superior en morado institucional */
+    border-top: 3px solid var(--color-principal); 
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card i {
+    /* Iconos en azul eléctrico de vanguardia */
+    color: var(--color-acento-vanguardia);
+    font-size: 1.6rem;
+    margin-right: 15px;
+}
+
+/* --- Layout de Dos Columnas --- */
+.two-col-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.info-card {
+    background-color: var(--color-texto-claro);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+    border-bottom: 2px solid var(--color-fondo-claro);
+    padding-bottom: 10px;
+}
+
+/* Lista con enfoque profesional */
+.info-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-card ul li {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    margin-bottom: 10px;
+}
+
+.info-card ul li::before {
+    content: "•"; 
+    color: var(--color-principal); /* Puntos en morado */
+    font-weight: bold;
+    display: inline-block;
+    width: 1.5em;
+}
+
+/* --- Programas de Enriquecimiento (Fondo Oscuro) --- */
+.dark-bg-secundaria {
+    /* Fondo muy oscuro, ideal para resaltar tecnología y programas especiales */
+    background-color: var(--color-fondo-oscuro); 
+    color: var(--color-texto-claro);
+}
+
+.dark-bg-secundaria h2 {
+    color: var(--color-acento-vanguardia); /* Título en acento claro */
+}
+
+.dark-bg-secundaria h3 {
+    color: var(--color-texto-claro);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.light-card {
+    /* Las tarjetas en fondo oscuro las hacemos blancas */
+    background-color: var(--color-texto-claro);
+    color: var(--color-texto-oscuro);
+}
+
+.light-card h3 {
+    color: var(--color-principal);
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.tag-list span {
+    /* Tags en morado institucional */
+    background-color: var(--color-principal);
+    color: var(--color-texto-claro);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* --- Admisión y Contacto --- */
+.admision-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.admision-steps ul {
+    list-style: none;
+    padding: 0;
+}
+
+.admision-steps ul li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: var(--color-texto-oscuro);
+}
+
+.admision-steps ul li i {
+    /* Iconos de pasos de admisión en azul eléctrico */
+    color: var(--color-acento-vanguardia); 
+    margin-right: 10px;
+    width: 20px;
+}
+
+.admision-contact p i {
+    color: var(--color-principal);
+    margin-right: 8px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: var(--color-texto-claro);
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover del botón principal en azul eléctrico */
+.btn-principal:hover {
+    background-color: var(--color-acento-vanguardia);
+}
+
+/* --- Media Queries (Responsividad) --- */
+
+@media (max-width: 768px) {
+    /* Top bar responsive */
+    .top-bar {
+        padding: 0.4rem 3%;
+        font-size: 0.75rem;
+        gap: 0.8rem;
+        top: 0;
+    }
+    
+    .top-bar a {
+        font-size: 0.75rem;
+    }
+    
+    /* Header móvil */
+    header {
+        padding: 0.8rem 3%;
+        flex-wrap: wrap;
+        top: 38px;
+    }
+    
+    /* Logo más pequeño en móvil */
+    .logo-container {
+        flex: 1;
+        gap: 0.5rem;
+    }
+    
+    .logo-container img {
+        height: 50px;
+    }
+    
+    .logo-text h1 {
+        font-size: 1rem;
+    }
+    
+    .logo-text .tagline {
+        font-size: 0.65rem;
+    }
+    
+    /* Mostrar botón hamburguesa en móvil */
+    .menu-toggle {
+        display: block;
+        order: 3;
+    }
+    
+    /* Menú de navegación en móvil */
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background: #510488;
+        order: 4;
+        padding: 1rem 0;
+        margin-top: 0.5rem;
+    }
+    
+    nav.active {
+        display: flex;
+    }
+    
+    nav a {
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    /* Dropdowns en móvil */
+    .dropdown {
+        width: 100%;
+    }
+    
+    .dropbtn {
+        width: 100%;
+        text-align: left;
+        padding: 0.8rem 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background-color: #6a1b9a;
+        border-radius: 0;
+    }
+    
+    .dropdown-content a {
+        padding-left: 2rem;
+    }
+    /* Ajustes para móviles */
+    .hero-secundaria h1 {
+        font-size: 2.5rem;
+    }
+    .two-col-layout, .admision-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    /* Desactivación de fixed en móviles */
+    .top-bar, header {
+        position: static; 
+        height: auto;
+        padding: 0.5rem 5%;
+    }
+    
+    body {
+        padding-top: 0; 
+    }
+}

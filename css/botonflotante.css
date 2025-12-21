@@ -1,0 +1,57 @@
+/* --- Estilos para el Botón Flotante de WhatsApp --- */
+
+/* Clase para fijar la posición y el estilo del botón */
+.whatsapp-float {
+    /* Fija el elemento en la ventana del navegador */
+    position: fixed;
+    /* Ubicación: 20px desde la parte inferior */
+    bottom: 20px;
+    /* Ubicación: 20px desde la parte derecha */
+    right: 20px;
+    /* Tamaño del área del botón (por ejemplo, 60px x 60px) */
+    width: 60px;
+    height: 60px;
+    /* Forma circular */
+    border-radius: 50%;
+    /* Color de fondo típico de WhatsApp */
+    background-color: #25d366;
+    /* Sombra para que destaque */
+    box-shadow: 2px 2px 3px #999;
+    /* Asegura que esté por encima de otros elementos */
+    z-index: 1000;
+    /* Centra el ícono SVG dentro del botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Transición suave para el efecto hover */
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos del ícono SVG dentro del botón */
+.whatsapp-float svg {
+    /* Color del ícono: blanco */
+    color: white;
+    /* Ajustar el tamaño del ícono (30px definido en el HTML) */
+    width: 30px;
+    height: 30px;
+}
+
+/* Efecto al pasar el ratón (opcional) */
+.whatsapp-float:hover {
+    background-color: #128c7e; /* Un tono un poco más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Ligeramente más grande */
+}
+
+/* Opcional: Para dispositivos móviles, puedes hacerlo un poco más pequeño */
+@media (max-width: 600px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+    .whatsapp-float svg {
+        width: 25px;
+        height: 25px;
+    }
+}
