@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colegio San Isidro - Educación de Calidad en Ica</title>
-    <link rel="icon" type="image/png" href="../img/icono.png">
+    <link rel="icon" type="image/webp" href="../img/icono.webp">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/video.css">
 </head>
@@ -36,7 +36,7 @@
     <header>
         <a href="#" class="logo-link">
             <div class="logo-container">
-                <img src="../img/logocolegioprin.jpg" alt="Logo San Isidro">
+                <img src="../img/logocolegioprin.webp" alt="Logo San Isidro">
                 <div class="logo-text">
                     <div style="font-size: 0.8rem; font-weight: 400;">INSTITUCION EDUCATIVA</div>
                     <h1>San Isidro</h1>
@@ -73,16 +73,16 @@
     
     <div class="carousel-container">
         <div class="carousel-slide active">
-            <img src="../img/flayer.png" alt="Estudiantes de San Isidro - Educa para el éxito">
+            <img src="../img/flayer.webp" alt="Estudiantes de San Isidro - Educa para el éxito">
         </div>
         <div class="carousel-slide">
-            <img src="../img/innovacion.jfif" alt="Instalaciones modernas">
+            <img src="../img/innovacion.webp" alt="Instalaciones modernas">
         </div>
         <div class="carousel-slide">
             <img src="../img/pinturaele.jpg" alt="Actividades educativas">
         </div>
         <div class="carousel-slide">
-        <img src="../img/formacion.jfif" alt="Formación integral">
+        <img src="../img/formacion.webp" alt="Formación integral">
         </div>
         
         <div class="carousel-indicators">
@@ -105,37 +105,37 @@
         <section>
             <div class="servicios-grid">
                 <div class="servicio-caja">
-                    <img src="../img/icono1valores.png" alt="Ícono Excelencia Académica" class="servicio-icono">
+                    <img src="../img/icono1valores.webp" alt="Ícono Excelencia Académica" class="servicio-icono">
                     <h3>Excelencia Académica</h3>
                     <p>San Isidro se enorgullece de ofrecer una educación de la más alta calidad, preparando a sus estudiantes para el éxito en la universidad y más allá.</p>
                 </div>
 
                 <div class="servicio-caja">
-                    <img src="../img/icono2valores.png" alt="Ícono Liderazgo" class="servicio-icono">
+                    <img src="../img/icono2valores.webp" alt="Ícono Liderazgo" class="servicio-icono">
                     <h3>Liderazgo</h3>
                     <p>San Isidro prepara a sus estudiantes para convertirse en líderes del mañana, capaces de pensar críticamente, resolver problemas y crear un impacto positivo en el mundo.</p>
                 </div>
 
                 <div class="servicio-caja">
-                    <img src="../img/icono3valores.png" alt="Ícono Innovación Educativa" class="servicio-icono">
+                    <img src="../img/icono3valores.webp" alt="Ícono Innovación Educativa" class="servicio-icono">
                     <h3>Innovación Educativa</h3>
                     <p>San Isidro integra constantemente nuevas tecnologías y metodologías innovadoras en sus aulas para mejorar el aprendizaje y la participación de los estudiantes.</p>
                 </div>
 
                 <div class="servicio-caja">
-                    <img src="../img/icono4valores.png" alt="Ícono Formación Integral" class="servicio-icono">
+                    <img src="../img/icono4valores.webp" alt="Ícono Formación Integral" class="servicio-icono">
                     <h3>Formación Integral</h3>
                     <p>San Isidro va más allá de la educación académica, fomentando el desarrollo integral de sus estudiantes en valores, habilidades sociales, artísticas y deportivas.</p>
                 </div>
                 
                 <div class="servicio-caja">
-                    <img src="../img/icono5valores.png" alt="Ícono Ambiente Positivo y Seguro" class="servicio-icono">
+                    <img src="../img/icono5valores.webp" alt="Ícono Ambiente Positivo y Seguro" class="servicio-icono">
                     <h3>Ambiente Positivo y Seguro</h3>
                     <p>San Isidro crea un ambiente escolar cálido y acogedor donde los estudiantes se sienten valorados, respetados y apoyados para alcanzar su máximo potencial.</p>
                 </div>
                 
                 <div class="servicio-caja">
-                    <img src="../img/icono6valores.png" alt="Ícono Comunidad Fuerte" class="servicio-icono">
+                    <img src="../img/icono6valores.webp" alt="Ícono Comunidad Fuerte" class="servicio-icono">
                     <h3>Comunidad Fuerte</h3>
                     <p>San Isidro fomenta una sólida comunidad entre padres, profesores y estudiantes, trabajando juntos para el éxito de cada niño.</p>
                 </div>
