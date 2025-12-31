@@ -232,14 +232,18 @@
             <h2 class="video-title">Video de presentación de Colegio San Isidro</h2>
             
             <div class="video-container-wrapper">
-                <div class="video-responsive">
-                    <iframe 
-                        src="https://www.youtube.com/embed/2LmVqxcDZh0?si=0KSrYmYn-1t87PuH" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen 
-                        title="Video de Presentación del Colegio San Isidro">
-                    </iframe>
+                <div class="video-responsive youtube-lazy-load" 
+                    data-embed="2LmVqxcDZh0" 
+                    data-poster-url="https://i.ytimg.com/vi/2LmVqxcDZh0/hqdefault.jpg" 
+                    style="background-image: url('URL_DE_TU_MINIATURA_OPTMIZADA.webp');">
+                    <button class="play-button" aria-label="Reproducir video de presentación"></button>
+                    <noscript>
+                        <iframe 
+                            src="https://www.youtube.com/embed/2LmVqxcDZh0?si=0KSrYmYn-1t87PuH" 
+                            frameborder="0" 
+                            allowfullscreen>
+                        </iframe>
+                    </noscript>
                 </div>
             </div>
         </section>
@@ -339,6 +343,7 @@
             </div>
         </div>
     </div>
+    <script defer src="../js/youtube-lazy.js"></script>
     <script defer src="../js/menu.js"></script>
     <script defer src="../js/carrusel.js"></script>
     <script defer src="../js/carruselindex.js"></script>

@@ -28,6 +28,66 @@
     max-width: 100%; 
 }
 
+/* ---------------------------------------------------- */
+/* ESTILOS AÑADIDOS PARA LA CARGA DIFERIDA DE YOUTUBE */
+/* ---------------------------------------------------- */
+
+.youtube-lazy-load {
+    /* Estos estilos se aplicarán al div contenedor que muestra la miniatura */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el área */
+    background-position: center;
+    transition: background-image 0.2s ease;
+    border: none;
+    
+    /* Asegura que el botón de play se renderice por encima */
+    display: block;
+}
+
+.youtube-lazy-load .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px; /* Tamaño del botón más visible */
+    height: 60px;
+    background-color: rgba(255, 0, 0, 0.8); /* Rojo fuerte semitransparente */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    
+    /* Centrar el triángulo de play */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.youtube-lazy-load .play-button:hover {
+    background-color: rgba(255, 0, 0, 1); /* Se pone más opaco al pasar el mouse */
+}
+
+/* Estilo para el triángulo de play */
+.youtube-lazy-load .play-button::before {
+    content: '';
+    display: block;
+    border-width: 10px 0 10px 20px;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff; /* Triángulo blanco */
+    margin-left: 6px;
+}
+
+/* ---------------------------------------------------- */
+/* ESTILO PARA EL IFRAME (SE APLICA CUANDO SE CARGA) */
+/* ---------------------------------------------------- */
+
 .video-responsive iframe {
     position: absolute;
     top: 0;
