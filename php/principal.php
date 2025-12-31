@@ -79,7 +79,7 @@
             <img src="../img/innovacion.webp" alt="Instalaciones modernas">
         </div>
         <div class="carousel-slide">
-            <img src="../img/pinturaele.jpg" alt="Actividades educativas">
+            <img src="../img/pinturaele.webp" alt="Actividades educativas">
         </div>
         <div class="carousel-slide">
         <img src="../img/formacion.webp" alt="Formación integral">
@@ -159,7 +159,7 @@
                 
                 <a href="../pdf/PSICOBOLETIN2.pdf" target="_blank" class="boletin-card" aria-label="Artículo: ¿Cómo desarrollar en casa la educación emocional de los niños?">
                     <div class="boletin-image-container">
-                        <img src="../img/psico2.jfif" alt="Padres consolando a su hija pequeña" class="boletin-image">
+                        <img src="../img/psico2.webp" alt="Padres consolando a su hija pequeña" class="boletin-image">
                         <span class="etiqueta">Psicoboletín</span>
                     </div>
                     <p class="boletin-caption">¿Cómo desarrollar en casa la educación emocional de los niños?</p>
@@ -183,7 +183,7 @@
 
                 <div class="sieweb-container">
                     <a href="https://play.google.com/store/apps/details?id=com.LACIELSA.SIADEDApp" target="_blank" class="sieweb-link">
-                        <img src="../img/logosiaded.png" alt="Icono de SieWeb" class="sieweb-icono">
+                        <img src="../img/logosiaded.webp" alt="Icono de SieWeb" class="sieweb-icono">
                     </a>
                 </div>
             </div>
@@ -198,31 +198,31 @@
                 <div class="eventos-grid">
                     <a href="https://web.facebook.com/share/p/1Ko7t1Mwo3/" target="_blank" class="evento-card">
                         <div class="evento-image">
-                            <img src="../img/pasacalleeducacioninicial.jfif" alt="Semana de la Educación Inicial 2025">
+                            <img src="../img/pasacalleeducacioninicial.webp" alt="Semana de la Educación Inicial 2025">
                         </div>
                         <h3>Semana de la Educación Inicial 2025</h3>
                     </a>
                     <a href="https://web.facebook.com/share/p/1G6mBiNvrD/" target="_blank" class="evento-card">
                         <div class="evento-image">
-                            <img src="../img/pasacalleeducacioninicial.jfif" alt="kermess 2025">
+                            <img src="../img/kermesse.webp" alt="kermess 2025">
                         </div>
                         <h3>Kermess 2025</h3>
                     </a>
                     <a href="https://web.facebook.com/share/p/16Jd4irmRv/" target="_blank" class="evento-card">
                         <div class="evento-image">
-                            <img src="../img/olimpiadasacademicas.jpg" alt="Olimpiadas Academicas 2025">
+                            <img src="../img/olimpiadasacademicas.webp" alt="Olimpiadas Academicas 2025">
                         </div>
                         <h3>Olimpiadas Academicas</h3>
                     </a>
                     <a href="https://web.facebook.com/share/p/1H17ygVNiK/" target="_blank" class="evento-card">
                         <div class="evento-image">
-                            <img src="../img/alimpiadas.jfif" alt="Olimpiadas 2025">
+                            <img src="../img/alimpiadas.webp" alt="Olimpiadas 2025">
                         </div>
                         <h3>Olimpiadas 2025</h3>
                     </a>
                     <a href="https://web.facebook.com/share/p/17JumLPHbU/" target="_blank" class="evento-card">
                         <div class="evento-image">
-                            <img src="../img/OLIMPIADASPADRES.jpg" alt="Olimpadres 2025">
+                            <img src="../img/OLIMPIADASPADRES.webp" alt="Olimpadres 2025">
                         </div>
                         <h3>Olimpadres 2025</h3>
                     </a>
@@ -315,7 +315,7 @@
 
                 <div class="modal-column modal-vacaciones">
                     <a href="../vacaciones.html" aria-label="Ver detalles de Vacaciones Útiles 2026">
-                        <img src="../img/vacaciones.png" alt="Vacaciones Útiles 2026 CSI Colegio San Isidro" class="vacaciones-img">
+                        <img src="../img/vacaciones.webp" alt="Vacaciones Útiles 2026 CSI Colegio San Isidro" class="vacaciones-img">
                     </a>
                 </div>
                 
