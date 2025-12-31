@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colegio San Isidro - Educación de Calidad en Ica</title>
     <link rel="icon" type="image/webp" href="../img/icono.webp">
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/video.css">
-</head>
+    
+    <link rel="stylesheet" href="../css/index.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../css/video.css" media="print" onload="this.media='all'">
+    
+    </head>
 <body>
 
     <div class="top-bar">
@@ -76,13 +78,13 @@
             <img src="../img/flayer.webp" alt="Estudiantes de San Isidro - Educa para el éxito">
         </div>
         <div class="carousel-slide">
-            <img src="../img/innovacion.webp" alt="Instalaciones modernas">
+            <img src="../img/innovacion.webp" alt="Instalaciones modernas" loading="lazy">
         </div>
         <div class="carousel-slide">
-            <img src="../img/pinturaele.webp" alt="Actividades educativas">
+            <img src="../img/pinturaele.webp" alt="Actividades educativas" loading="lazy">
         </div>
         <div class="carousel-slide">
-        <img src="../img/formacion.webp" alt="Formación integral">
+        <img src="../img/formacion.webp" alt="Formación integral" loading="lazy">
         </div>
         
         <div class="carousel-indicators">
@@ -94,48 +96,40 @@
     </div>
     
     <main>
-        <!-- Admisión
-        <section id="admision">
-            <h2>EDUCA PARA EL ÉXITO</h2>
-            <div class="admision-year">2026</div>
-            <p class="admision-subtitle">INICIAL - PRIMARIA - SECUNDARIA</p>
-            <a href="https://www.santimojesus.edu.pe/admision.html" class="cta-button">PROCESO DE ADMISIÓN 2026</a>
-        </section>-->
-        <!--Valores-->
         <section>
             <div class="servicios-grid">
                 <div class="servicio-caja">
-                    <img src="../img/icono1valores.webp" alt="Ícono Excelencia Académica" class="servicio-icono">
+                    <img src="../img/icono1valores.webp" alt="Ícono Excelencia Académica" class="servicio-icono" loading="lazy">
                     <h3>Excelencia Académica</h3>
                     <p>San Isidro se enorgullece de ofrecer una educación de la más alta calidad, preparando a sus estudiantes para el éxito en la universidad y más allá.</p>
                 </div>
 
                 <div class="servicio-caja">
-                    <img src="../img/icono2valores.webp" alt="Ícono Liderazgo" class="servicio-icono">
+                    <img src="../img/icono2valores.webp" alt="Ícono Liderazgo" class="servicio-icono" loading="lazy">
                     <h3>Liderazgo</h3>
                     <p>San Isidro prepara a sus estudiantes para convertirse en líderes del mañana, capaces de pensar críticamente, resolver problemas y crear un impacto positivo en el mundo.</p>
                 </div>
 
                 <div class="servicio-caja">
-                    <img src="../img/icono3valores.webp" alt="Ícono Innovación Educativa" class="servicio-icono">
+                    <img src="../img/icono3valores.webp" alt="Ícono Innovación Educativa" class="servicio-icono" loading="lazy">
                     <h3>Innovación Educativa</h3>
                     <p>San Isidro integra constantemente nuevas tecnologías y metodologías innovadoras en sus aulas para mejorar el aprendizaje y la participación de los estudiantes.</p>
                 </div>
 
                 <div class="servicio-caja">
-                    <img src="../img/icono4valores.webp" alt="Ícono Formación Integral" class="servicio-icono">
+                    <img src="../img/icono4valores.webp" alt="Ícono Formación Integral" class="servicio-icono" loading="lazy">
                     <h3>Formación Integral</h3>
                     <p>San Isidro va más allá de la educación académica, fomentando el desarrollo integral de sus estudiantes en valores, habilidades sociales, artísticas y deportivas.</p>
                 </div>
                 
                 <div class="servicio-caja">
-                    <img src="../img/icono5valores.webp" alt="Ícono Ambiente Positivo y Seguro" class="servicio-icono">
+                    <img src="../img/icono5valores.webp" alt="Ícono Ambiente Positivo y Seguro" class="servicio-icono" loading="lazy">
                     <h3>Ambiente Positivo y Seguro</h3>
                     <p>San Isidro crea un ambiente escolar cálido y acogedor donde los estudiantes se sienten valorados, respetados y apoyados para alcanzar su máximo potencial.</p>
                 </div>
                 
                 <div class="servicio-caja">
-                    <img src="../img/icono6valores.webp" alt="Ícono Comunidad Fuerte" class="servicio-icono">
+                    <img src="../img/icono6valores.webp" alt="Ícono Comunidad Fuerte" class="servicio-icono" loading="lazy">
                     <h3>Comunidad Fuerte</h3>
                     <p>San Isidro fomenta una sólida comunidad entre padres, profesores y estudiantes, trabajando juntos para el éxito de cada niño.</p>
                 </div>
@@ -151,7 +145,7 @@
                 
                 <a href="../pdf/PSICOBOLETIN.pdf" target="_blank" class="boletin-card" aria-label="Artículo: Adolescentes y Salud Mental">
                     <div class="boletin-image-container">
-                        <img src="../img/psico1.webp" alt="Padres e hija adolescente conversando" class="boletin-image">
+                        <img src="../img/psico1.webp" alt="Padres e hija adolescente conversando" class="boletin-image" loading="lazy">
                         <span class="etiqueta">Psicoboletín</span>
                     </div>
                     <p class="boletin-caption">¿Qué hacer con cada emoción?</p>
@@ -159,7 +153,7 @@
                 
                 <a href="../pdf/PSICOBOLETIN2.pdf" target="_blank" class="boletin-card" aria-label="Artículo: ¿Cómo desarrollar en casa la educación emocional de los niños?">
                     <div class="boletin-image-container">
-                        <img src="../img/psico2.webp" alt="Padres consolando a su hija pequeña" class="boletin-image">
+                        <img src="../img/psico2.webp" alt="Padres consolando a su hija pequeña" class="boletin-image" loading="lazy">
                         <span class="etiqueta">Psicoboletín</span>
                     </div>
                     <p class="boletin-caption">¿Cómo desarrollar en casa la educación emocional de los niños?</p>
@@ -167,7 +161,7 @@
                 
                 <a href="../pdf/PSICOBOLETIN3.pdf" target="_blank" class="boletin-card" aria-label="Artículo: La importancia de establecer normas y límites en la convivencia familiar">
                     <div class="boletin-image-container">
-                        <img src="../img/psico3.webp" alt="Madre hablando seriamente con su hija" class="boletin-image">
+                        <img src="../img/psico3.webp" alt="Madre hablando seriamente con su hija" class="boletin-image" loading="lazy">
                         <span class="etiqueta">Psicoboletín</span>
                     </div>
                     <p class="boletin-caption">Tu superpoder interior: UN VIAJE A LA AUTOESTIMA </p>
@@ -183,7 +177,7 @@
 
                 <div class="sieweb-container">
                     <a href="https://play.google.com/store/apps/details?id=com.LACIELSA.SIADEDApp" target="_blank" class="sieweb-link">
-                        <img src="../img/logosiaded.webp" alt="Icono de SieWeb" class="sieweb-icono">
+                        <img src="../img/logosiaded.webp" alt="Icono de SieWeb" class="sieweb-icono" loading="lazy">
                     </a>
                 </div>
             </div>
@@ -198,31 +192,31 @@
                 <div class="eventos-grid">
                     <a href="https://web.facebook.com/share/p/1Ko7t1Mwo3/" target="_blank" class="evento-card">
                         <div class="evento-image">
-                            <img src="../img/pasacalleeducacioninicial.webp" alt="Semana de la Educación Inicial 2025">
+                            <img src="../img/pasacalleeducacioninicial.webp" alt="Semana de la Educación Inicial 2025" loading="lazy">
                         </div>
                         <h3>Semana de la Educación Inicial 2025</h3>
                     </a>
                     <a href="https://web.facebook.com/share/p/1G6mBiNvrD/" target="_blank" class="evento-card">
                         <div class="evento-image">
-                            <img src="../img/kermesse.webp" alt="kermess 2025">
+                            <img src="../img/kermesse.webp" alt="kermess 2025" loading="lazy">
                         </div>
                         <h3>Kermess 2025</h3>
                     </a>
                     <a href="https://web.facebook.com/share/p/16Jd4irmRv/" target="_blank" class="evento-card">
                         <div class="evento-image">
-                            <img src="../img/olimpiadasacademicas.webp" alt="Olimpiadas Academicas 2025">
+                            <img src="../img/olimpiadasacademicas.webp" alt="Olimpiadas Academicas 2025" loading="lazy">
                         </div>
                         <h3>Olimpiadas Academicas</h3>
                     </a>
                     <a href="https://web.facebook.com/share/p/1H17ygVNiK/" target="_blank" class="evento-card">
                         <div class="evento-image">
-                            <img src="../img/alimpiadas.webp" alt="Olimpiadas 2025">
+                            <img src="../img/alimpiadas.webp" alt="Olimpiadas 2025" loading="lazy">
                         </div>
                         <h3>Olimpiadas 2025</h3>
                     </a>
                     <a href="https://web.facebook.com/share/p/17JumLPHbU/" target="_blank" class="evento-card">
                         <div class="evento-image">
-                            <img src="../img/OLIMPIADASPADRES.webp" alt="Olimpadres 2025">
+                            <img src="../img/OLIMPIADASPADRES.webp" alt="Olimpadres 2025" loading="lazy">
                         </div>
                         <h3>Olimpadres 2025</h3>
                     </a>
@@ -277,10 +271,8 @@
                     </div>
                 </div>
 
-                <!-- Lista de comentarios -->
                 <div id="listaComentarios" class="lista-comentarios" aria-live="polite">
-                    <!-- Comentarios inyectados por la bd -->
-                </div>
+                    </div>
             </div>
         </section>
     </main>
@@ -315,7 +307,7 @@
 
                 <div class="modal-column modal-vacaciones">
                     <a href="../vacaciones.html" aria-label="Ver detalles de Vacaciones Útiles 2026">
-                        <img src="../img/vacaciones.webp" alt="Vacaciones Útiles 2026 CSI Colegio San Isidro" class="vacaciones-img">
+                        <img src="../img/vacaciones.webp" alt="Vacaciones Útiles 2026 CSI Colegio San Isidro" class="vacaciones-img" loading="lazy">
                     </a>
                 </div>
                 
@@ -347,10 +339,10 @@
             </div>
         </div>
     </div>
-    <script src="../js/menu.js"></script>
-    <script src="../js/carrusel.js"></script>
-    <script src="../js/carruselindex.js"></script>
-    <script src="../js/comentarios.js"></script>
-    <script src="../js/modalindex.js"></script>
+    <script defer src="../js/menu.js"></script>
+    <script defer src="../js/carrusel.js"></script>
+    <script defer src="../js/carruselindex.js"></script>
+    <script defer src="../js/comentarios.js"></script>
+    <script defer src="../js/modalindex.js"></script>
 </body>
 </html>
