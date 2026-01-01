@@ -369,7 +369,7 @@
     <script defer src="../js/carruselindex.js"></script>
     <script defer src="../js/modalindex.js"></script>
     
-    <!--<script>
+    <script>
         // Este script inline (Lazy Load del script de Comentarios) está CORRECTO. 
         // Se carga de forma no bloqueante solo cuando el usuario se acerca a la sección de comentarios.
         const comentariosSection = document.getElementById('comentarios');
@@ -396,6 +396,6 @@
         if (comentariosSection) {
             observer.observe(comentariosSection);
         }
-    </script>-->
+    </script>
 </body>
 </html>
