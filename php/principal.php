@@ -242,11 +242,11 @@
             <div class="video-container-wrapper">
                 <div class="video-responsive youtube-lazy-load" 
                     data-embed="2LmVqxcDZh0" 
-                    data-poster-url="https://i.ytimg.com/vi/2LmVqxcDZh0/hqdefault.jpg" 
+                    data-poster-url="https://img.youtube.com/vi/2LmVqxcDZh0/hqdefault.jpg" 
                     
                     style="
                         /* CORRECCIÓN CLS del video: Añadir background-size para evitar el salto */
-                        background-image: url('URL_DE_TU_MINIATURA_OPTIMIZADA.webp');
+                        background-image: url('https://img.youtube.com/vi/2LmVqxcDZh0/hqdefault.jpg');
                         background-size: cover; /* AÑADIDO: Asegura que la miniatura cubra el espacio */
                         background-repeat: no-repeat; /* AÑADIDO */
                         position: relative; 
