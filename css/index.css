@@ -976,7 +976,7 @@ footer {
 }
         
 footer a {
-    color: #a0c4ff;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -1195,4 +1195,8 @@ footer a {
     .modal-niveles {
         flex-direction: column;
     }
+    footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
 }
