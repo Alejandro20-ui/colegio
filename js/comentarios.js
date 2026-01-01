@@ -1,4 +1,4 @@
-// Este es un ESQUEMA de cómo luciría el archivo app.js
+// comentarios.js (VERSION CORREGIDA)
 document.addEventListener('DOMContentLoaded', () => {
     const comentarioForm = document.getElementById('comentarioForm');
     const listaComentarios = document.getElementById('listaComentarios');
@@ -8,28 +8,35 @@ document.addEventListener('DOMContentLoaded', () => {
     let comentariosCargados = false;
     const comentariosSection = document.getElementById('comentarios');
 
-    // 1. FUNCIÓN PARA CARGAR COMENTARIOS (AHORA SE ACTIVA SOLO BAJO DEMANDA)
+    // 1. FUNCIÓN PARA CARGAR COMENTARIOS
     function cargarComentarios(orden) {
-        // [OPTIMIZACIÓN] Prevenir la recarga si ya se cargó, a menos que cambiemos el orden.
+        // [OPTIMIZACIÓN] Prevenir la recarga si ya se cargó y la orden es "nuevo".
         if (comentariosCargados && orden === 'nuevo') {
-            // Solo salimos si es la primera carga (orden='nuevo') y ya se ejecutó.
-            // Si el usuario cambia el orden, debe recargar.
+            return;
         }
 
         // Usar la función fetch para llamar al backend
-        // NOTA: 'obtener_comentarios.php' debería ser la ruta completa si es necesaria (ej. /php/obtener_comentarios.php)
+        // NOTA: Usa la ruta COMPLETA desde la raíz si es necesario (ej. /php/obtener_comentarios.php)
         fetch(`/php/obtener_comentarios.php?orden=${orden}`)
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Error HTTP: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 // Limpiar la lista actual
                 listaComentarios.innerHTML = '';
                 
-                // Actualizar el contador
-                document.getElementById('totalComentarios').textContent = `${data.length} comentarios`;
+                // Asegurarse de que 'data' sea un array válido
+                const comentarios = Array.isArray(data) ? data : [];
 
-                if (data.length > 0) {
-                    data.forEach(comentario => {
-                        // Crear el HTML para cada comentario (como si fuera un tweet)
+                // Actualizar el contador
+                document.getElementById('totalComentarios').textContent = `${comentarios.length} comentarios`;
+
+                if (comentarios.length > 0) {
+                    comentarios.forEach(comentario => {
+                        // Crear el HTML para cada comentario
                         const comentarioHTML = `
                             <article class="comentario-item">
                                 <p class="comentario-mensaje">${comentario.mensaje}</p>
@@ -45,9 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     listaComentarios.innerHTML = '<p class="no-comments">¡Sé el primero en comentar!</p>';
                 }
             })
-            .catch(error => console.error('Error al cargar comentarios:', error));
+            .catch(error => {
+                console.error('Error al cargar comentarios. Revisa el archivo PHP y la ruta:', error);
+                listaComentarios.innerHTML = '<p class="error-comments">Error al cargar. Intenta de nuevo más tarde.</p>';
+            });
         
-        // Marcar como cargado después de la primera llamada (que siempre es 'nuevo')
         comentariosCargados = true;
     }
 
@@ -65,8 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
             alert(result.message);
             if (result.success) {
                 comentarioForm.reset(); // Limpiar el formulario
-                // NOTA: Los comentarios nuevos no se cargan inmediatamente
-                // porque necesitan ser aprobados (aprobado = 0 por defecto).
+                // NOTA: Si el comentario es aprobado inmediatamente (aprobado=1), puedes recargar aquí:
+                // cargarComentarios(ordenSelect.value); 
             }
         })
         .catch(error => console.error('Error al enviar:', error));
@@ -83,26 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cargarComentarios(this.value);
     });
 
-    // 5. [OPTIMIZACIÓN CRÍTICA] Cargar comentarios solo cuando la sección es visible
-    // Esto reemplaza la línea 'cargarComentarios(ordenSelect.value);'
-    
-    if (comentariosSection && 'IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                // Si la sección de comentarios está dentro del viewport
-                if (entry.isIntersecting) {
-                    cargarComentarios(ordenSelect.value);
-                    observer.unobserve(comentariosSection); // Deja de observar una vez cargado
-                }
-            });
-        }, { 
-            rootMargin: '0px', 
-            threshold: 0.1 // Inicia la carga cuando el 10% de la sección es visible
-        });
-
-        observer.observe(comentariosSection);
-    } else {
-        // Fallback para navegadores antiguos sin IntersectionObserver (cargar inmediatamente)
-        cargarComentarios(ordenSelect.value);
-    }
+    // 5. [CORRECCIÓN CRÍTICA] Ejecutar la carga de comentarios inmediatamente
+    // Solo si el script se ha cargado (lo cual garantiza el script inline del HTML).
+    cargarComentarios(ordenSelect.value);
 });

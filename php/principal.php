@@ -42,9 +42,8 @@
             <div class="logo-container">
                 <img src="../img/logocolegioprin.webp" 
                     alt="Logo San Isidro" 
-                    width="1029" 
-                    height="1113"> 
-                <div class="logo-text">
+                    width="100" 
+                    height="110"> <div class="logo-text">
                     <div style="font-size: 0.8rem; font-weight: 400;">INSTITUCION EDUCATIVA</div>
                     <h1>San Isidro</h1>
                     <div class="tagline">PIENSA - CREA - LIDERA</div>
@@ -246,7 +245,10 @@
                     data-poster-url="https://i.ytimg.com/vi/2LmVqxcDZh0/hqdefault.jpg" 
                     
                     style="
-                        background-image: url('URL_DE_TU_MINIATURA_OPTMIZADA.webp');
+                        /* CORRECCIÓN CLS del video: Añadir background-size para evitar el salto */
+                        background-image: url('URL_DE_TU_MINIATURA_OPTIMIZADA.webp');
+                        background-size: cover; /* AÑADIDO: Asegura que la miniatura cubra el espacio */
+                        background-repeat: no-repeat; /* AÑADIDO */
                         position: relative; 
                         padding-bottom: 56.25%; 
                         height: 0; 
@@ -368,7 +370,8 @@
     <script defer src="../js/modalindex.js"></script>
     
     <script>
-        // Este script inline evita que comentarios.js bloquee la carga inicial.
+        // Este script inline (Lazy Load del script de Comentarios) está CORRECTO. 
+        // Se carga de forma no bloqueante solo cuando el usuario se acerca a la sección de comentarios.
         const comentariosSection = document.getElementById('comentarios');
         const scriptUrl = '../js/comentarios.js';
         let scriptLoaded = false;
