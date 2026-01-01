@@ -84,7 +84,9 @@
             <img src="../img/pinturaele.webp" alt="Actividades educativas" loading="lazy">
         </div>
         <div class="carousel-slide">
-        <img src="../img/formacion.webp" alt="Formación integral" loading="lazy">
+            <img src="../img/formacion.webp" 
+                alt="Formación integral" 
+                fetchpriority="high">
         </div>
         
         <div class="carousel-indicators">
@@ -239,7 +241,7 @@
                     <button class="play-button" aria-label="Reproducir video de presentación"></button>
                     <noscript>
                         <iframe 
-                            src="https://www.youtube.com/embed/2LmVqxcDZh0?si=0KSrYmYn-1t87PuH" 
+                            src="https://youtu.be/2LmVqxcDZh0?si=u_adiTDm9O800DMz" 
                             frameborder="0" 
                             allowfullscreen>
                         </iframe>

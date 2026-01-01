@@ -3,11 +3,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const comentarioForm = document.getElementById('comentarioForm');
     const listaComentarios = document.getElementById('listaComentarios');
     const ordenSelect = document.getElementById('orden');
+    
+    // [OPTIMIZACIÓN] Bandera para asegurar que solo se intente cargar una vez.
+    let comentariosCargados = false;
+    const comentariosSection = document.getElementById('comentarios');
 
-    // 1. FUNCIÓN PARA CARGAR COMENTARIOS
+    // 1. FUNCIÓN PARA CARGAR COMENTARIOS (AHORA SE ACTIVA SOLO BAJO DEMANDA)
     function cargarComentarios(orden) {
+        // [OPTIMIZACIÓN] Prevenir la recarga si ya se cargó, a menos que cambiemos el orden.
+        if (comentariosCargados && orden === 'nuevo') {
+            // Solo salimos si es la primera carga (orden='nuevo') y ya se ejecutó.
+            // Si el usuario cambia el orden, debe recargar.
+        }
+
         // Usar la función fetch para llamar al backend
-        fetch(`obtener_comentarios.php?orden=${orden}`)
+        // NOTA: 'obtener_comentarios.php' debería ser la ruta completa si es necesaria (ej. /php/obtener_comentarios.php)
+        fetch(`/php/obtener_comentarios.php?orden=${orden}`)
             .then(response => response.json())
             .then(data => {
                 // Limpiar la lista actual
@@ -35,6 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             })
             .catch(error => console.error('Error al cargar comentarios:', error));
+        
+        // Marcar como cargado después de la primera llamada (que siempre es 'nuevo')
+        comentariosCargados = true;
     }
 
     // 2. MANEJO DEL ENVÍO DEL FORMULARIO
@@ -42,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault(); // Evita el envío tradicional
         const formData = new FormData(this);
 
-        fetch('guardar_comentario.php', {
+        fetch('/php/guardar_comentario.php', {
             method: 'POST',
             body: formData
         })
@@ -60,14 +74,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. MANEJO DEL BOTÓN LIMPIAR
     document.getElementById('limpiarBtn').addEventListener('click', function() {
-    comentarioForm.reset(); 
+        comentarioForm.reset(); 
     });
 
     // 4. MANEJO DEL ORDEN
     ordenSelect.addEventListener('change', function() {
+        // El cambio de orden siempre dispara una recarga inmediata.
         cargarComentarios(this.value);
     });
 
-    // Cargar los comentarios al iniciar la página
-    cargarComentarios(ordenSelect.value); 
+    // 5. [OPTIMIZACIÓN CRÍTICA] Cargar comentarios solo cuando la sección es visible
+    // Esto reemplaza la línea 'cargarComentarios(ordenSelect.value);'
+    
+    if (comentariosSection && 'IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                // Si la sección de comentarios está dentro del viewport
+                if (entry.isIntersecting) {
+                    cargarComentarios(ordenSelect.value);
+                    observer.unobserve(comentariosSection); // Deja de observar una vez cargado
+                }
+            });
+        }, { 
+            rootMargin: '0px', 
+            threshold: 0.1 // Inicia la carga cuando el 10% de la sección es visible
+        });
+
+        observer.observe(comentariosSection);
+    } else {
+        // Fallback para navegadores antiguos sin IntersectionObserver (cargar inmediatamente)
+        cargarComentarios(ordenSelect.value);
+    }
 });
