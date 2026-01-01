@@ -38,14 +38,17 @@
     <header>
         <a href="#" class="logo-link">
             <div class="logo-container">
-                <img src="../img/logocolegioprin.webp" alt="Logo San Isidro">
+                <img src="../img/logocolegioprin.webp" 
+                    alt="Logo San Isidro" 
+                    width="1029" 
+                    height="1113"> 
                 <div class="logo-text">
                     <div style="font-size: 0.8rem; font-weight: 400;">INSTITUCION EDUCATIVA</div>
                     <h1>San Isidro</h1>
                     <div class="tagline">PIENSA - CREA - LIDERA</div>
                 </div>
             </div>
-        </a> 
+        </a>
 
         <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
         ☰
@@ -75,7 +78,9 @@
     
     <div class="carousel-container">
         <div class="carousel-slide active">
-            <img src="../img/flayer.webp" alt="Estudiantes de San Isidro - Educa para el éxito">
+            <img src="../img/flayer.webp" 
+         alt="Estudiantes de San Isidro - Educa para el éxito"
+         fetchpriority="high">
         </div>
         <div class="carousel-slide">
             <img src="../img/innovacion.webp" alt="Instalaciones modernas" loading="lazy">
@@ -101,37 +106,35 @@
         <section>
             <div class="servicios-grid">
                 <div class="servicio-caja">
-                    <img src="../img/icono1valores.webp" alt="Ícono Excelencia Académica" class="servicio-icono" loading="lazy">
+                    <img src="../img/icono1valores.webp" alt="Ícono Excelencia Académica" class="servicio-icono" loading="lazy" width="90" height="90">
                     <h3>Excelencia Académica</h3>
-                    <p>San Isidro se enorgullece de ofrecer una educación de la más alta calidad, preparando a sus estudiantes para el éxito en la universidad y más allá.</p>
                 </div>
 
                 <div class="servicio-caja">
-                    <img src="../img/icono2valores.webp" alt="Ícono Liderazgo" class="servicio-icono" loading="lazy">
+                    <img src="../img/icono2valores.webp" alt="Ícono Liderazgo" class="servicio-icono" loading="lazy" width="90" height="90">
                     <h3>Liderazgo</h3>
-                    <p>San Isidro prepara a sus estudiantes para convertirse en líderes del mañana, capaces de pensar críticamente, resolver problemas y crear un impacto positivo en el mundo.</p>
                 </div>
 
                 <div class="servicio-caja">
-                    <img src="../img/icono3valores.webp" alt="Ícono Innovación Educativa" class="servicio-icono" loading="lazy">
+                    <img src="../img/icono3valores.webp" alt="Ícono Innovación Educativa" class="servicio-icono" loading="lazy" class="servicio-icono" width="90" height="90">
                     <h3>Innovación Educativa</h3>
                     <p>San Isidro integra constantemente nuevas tecnologías y metodologías innovadoras en sus aulas para mejorar el aprendizaje y la participación de los estudiantes.</p>
                 </div>
 
                 <div class="servicio-caja">
-                    <img src="../img/icono4valores.webp" alt="Ícono Formación Integral" class="servicio-icono" loading="lazy">
+                    <img src="../img/icono4valores.webp" alt="Ícono Formación Integral" class="servicio-icono" loading="lazy" class="servicio-icono" width="90" height="90">
                     <h3>Formación Integral</h3>
                     <p>San Isidro va más allá de la educación académica, fomentando el desarrollo integral de sus estudiantes en valores, habilidades sociales, artísticas y deportivas.</p>
                 </div>
                 
                 <div class="servicio-caja">
-                    <img src="../img/icono5valores.webp" alt="Ícono Ambiente Positivo y Seguro" class="servicio-icono" loading="lazy">
+                    <img src="../img/icono5valores.webp" alt="Ícono Ambiente Positivo y Seguro" class="servicio-icono" loading="lazy" class="servicio-icono" width="90" height="90">
                     <h3>Ambiente Positivo y Seguro</h3>
                     <p>San Isidro crea un ambiente escolar cálido y acogedor donde los estudiantes se sienten valorados, respetados y apoyados para alcanzar su máximo potencial.</p>
                 </div>
                 
                 <div class="servicio-caja">
-                    <img src="../img/icono6valores.webp" alt="Ícono Comunidad Fuerte" class="servicio-icono" loading="lazy">
+                    <img src="../img/icono6valores.webp" alt="Ícono Comunidad Fuerte" class="servicio-icono" loading="lazy" class="servicio-icono" width="90" height="90">
                     <h3>Comunidad Fuerte</h3>
                     <p>San Isidro fomenta una sólida comunidad entre padres, profesores y estudiantes, trabajando juntos para el éxito de cada niño.</p>
                 </div>
@@ -147,7 +150,7 @@
                 
                 <a href="../pdf/PSICOBOLETIN.pdf" target="_blank" class="boletin-card" aria-label="Artículo: Adolescentes y Salud Mental">
                     <div class="boletin-image-container">
-                        <img src="../img/psico1.webp" alt="Padres e hija adolescente conversando" class="boletin-image" loading="lazy">
+                        <img src="../img/psico1.webp" alt="Padres e hija adolescente conversando" class="boletin-image" loading="lazy" class="servicio-icono" width="90" height="90">
                         <span class="etiqueta">Psicoboletín</span>
                     </div>
                     <p class="boletin-caption">¿Qué hacer con cada emoción?</p>
@@ -155,7 +158,7 @@
                 
                 <a href="../pdf/PSICOBOLETIN2.pdf" target="_blank" class="boletin-card" aria-label="Artículo: ¿Cómo desarrollar en casa la educación emocional de los niños?">
                     <div class="boletin-image-container">
-                        <img src="../img/psico2.webp" alt="Padres consolando a su hija pequeña" class="boletin-image" loading="lazy">
+                        <img src="../img/psico2.webp" alt="Padres consolando a su hija pequeña" class="boletin-image" loading="lazy" class="servicio-icono" width="90" height="90">
                         <span class="etiqueta">Psicoboletín</span>
                     </div>
                     <p class="boletin-caption">¿Cómo desarrollar en casa la educación emocional de los niños?</p>
@@ -163,7 +166,7 @@
                 
                 <a href="../pdf/PSICOBOLETIN3.pdf" target="_blank" class="boletin-card" aria-label="Artículo: La importancia de establecer normas y límites en la convivencia familiar">
                     <div class="boletin-image-container">
-                        <img src="../img/psico3.webp" alt="Madre hablando seriamente con su hija" class="boletin-image" loading="lazy">
+                        <img src="../img/psico3.webp" alt="Madre hablando seriamente con su hija" class="boletin-image" loading="lazy" class="servicio-icono" width="90" height="90">
                         <span class="etiqueta">Psicoboletín</span>
                     </div>
                     <p class="boletin-caption">Tu superpoder interior: UN VIAJE A LA AUTOESTIMA </p>
@@ -237,11 +240,22 @@
                 <div class="video-responsive youtube-lazy-load" 
                     data-embed="2LmVqxcDZh0" 
                     data-poster-url="https://i.ytimg.com/vi/2LmVqxcDZh0/hqdefault.jpg" 
-                    style="background-image: url('URL_DE_TU_MINIATURA_OPTMIZADA.webp');">
+                    
+                    /* INICIO: CÓDIGO CRÍTICO AÑADIDO INLINE PARA EVITAR EL CLS */
+                    style="
+                        background-image: url('URL_DE_TU_MINIATURA_OPTMIZADA.webp');
+                        position: relative; /* Para posicionar el botón de play */
+                        padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+                        height: 0; 
+                        overflow: hidden; 
+                        max-width: 100%;
+                    ">
+                    /* FIN: CÓDIGO CRÍTICO AÑADIDO */
+                    
                     <button class="play-button" aria-label="Reproducir video de presentación"></button>
                     <noscript>
                         <iframe 
-                            src="https://www.youtube.com/embed/2LmVqxcDZh0?si=0KSrYmYn-1t87PuH" 
+                            src="https://youtu.be/2LmVqxcDZh0?si=u_adiTDm9O800DMz" 
                             frameborder="0" 
                             allowfullscreen>
                         </iframe>
@@ -313,7 +327,7 @@
 
                 <div class="modal-column modal-vacaciones">
                     <a href="../vacaciones.html" aria-label="Ver detalles de Vacaciones Útiles 2026">
-                        <img src="../img/vacaciones.webp" alt="Vacaciones Útiles 2026 CSI Colegio San Isidro" class="vacaciones-img" loading="lazy">
+                        <img src="../img/vacaciones.webp" alt="Vacaciones Útiles 2026 CSI Colegio San Isidro" class="vacaciones-img" loading="lazy" class="servicio-icono" width="90" height="90">
                     </a>
                 </div>
                 
