@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colegio San Isidro - Educación de Calidad en Ica</title>
     <link rel="icon" type="image/webp" href="../img/icono.webp">
+     <meta name="description" content="Colegio San Isidro en Ica. Educación inicial, primaria y secundaria con excelencia académica. Matrícula 2026 abierta. Contáctanos hoy.">
     
     <link rel="stylesheet" href="../css/index.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="../css/video.css" media="print" onload="this.media='all'">
@@ -120,7 +121,7 @@
                 </div>
 
                 <div class="servicio-caja">
-                    <img src="../img/icono3valores.webp" alt="Ícono Innovación Educativa" class="servicio-icono" loading="lazy" width="90" height="90">
+                    <img src="../img/icono3valores.webp" alt="Ícono Innovación Educativa" class="servicio-icono" loading="lazy" width="75" height="102">
                     <h3>Innovación Educativa</h3>
                     <p>San Isidro integra constantemente nuevas tecnologías y metodologías innovadoras en sus aulas para mejorar el aprendizaje y la participación de los estudiantes.</p>
                 </div>
@@ -186,7 +187,7 @@
 
                 <div class="sieweb-container">
                     <a href="https://play.google.com/store/apps/details?id=com.LACIELSA.SIADEDApp" target="_blank" class="sieweb-link">
-                        <img src="../img/logosiaded.webp" alt="Icono de SieWeb" class="sieweb-icono" loading="lazy" width="100" height="100"> </a>
+                        <img src="../img/logosiaded.webp" alt="Icono de SieWeb" class="sieweb-icono" loading="lazy" width="240" height="90"></a>
                 </div>
             </div>
         </section>
