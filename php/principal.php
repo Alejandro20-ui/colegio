@@ -108,11 +108,13 @@
                 <div class="servicio-caja">
                     <img src="../img/icono1valores.webp" alt="Ícono Excelencia Académica" class="servicio-icono" loading="lazy" width="90" height="90">
                     <h3>Excelencia Académica</h3>
+                    <p>San Isidro se enorgullece de ofrecer una educación de la más alta calidad, preparando a sus estudiantes para el éxito en la universidad y más allá.</p>
                 </div>
 
                 <div class="servicio-caja">
                     <img src="../img/icono2valores.webp" alt="Ícono Liderazgo" class="servicio-icono" loading="lazy" width="90" height="90">
                     <h3>Liderazgo</h3>
+                    <p>San Isidro prepara a sus estudiantes para convertirse en líderes del mañana, capaces de pensar críticamente, resolver problemas y crear un impacto positivo en el mundo.</p>
                 </div>
 
                 <div class="servicio-caja">
@@ -250,7 +252,6 @@
                         overflow: hidden; 
                         max-width: 100%;
                     ">
-                    /* FIN: CÓDIGO CRÍTICO AÑADIDO */
                     
                     <button class="play-button" aria-label="Reproducir video de presentación"></button>
                     <noscript>
