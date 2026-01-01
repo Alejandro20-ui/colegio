@@ -241,7 +241,7 @@
                     <button class="play-button" aria-label="Reproducir video de presentación"></button>
                     <noscript>
                         <iframe 
-                            src="https://youtu.be/2LmVqxcDZh0?si=u_adiTDm9O800DMz" 
+                            src="https://www.youtube.com/embed/2LmVqxcDZh0?si=0KSrYmYn-1t87PuH" 
                             frameborder="0" 
                             allowfullscreen>
                         </iframe>
