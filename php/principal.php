@@ -369,6 +369,7 @@
     <script defer src="../js/carrusel.js"></script>
     <script defer src="../js/carruselindex.js"></script>
     <script defer src="../js/modalindex.js"></script>
+    <script defer src="../js/comentarios.js"></script>
     
      <Script de Lazy Load para comentarios --t>
         // Este script inline (Lazy Load del script de Comentarios) está CORRECTO. 
