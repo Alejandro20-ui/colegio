@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Usar la función fetch para llamar al backend
         // NOTA: Usa la ruta COMPLETA desde la raíz si es necesario (ej. /php/obtener_comentarios.php)
-        fetch(`/php/obtener_comentarios.php?orden=${orden}`)
+        fetch(`php/obtener_comentarios.php?orden=${orden}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Error HTTP: ${response.status}`);
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault(); // Evita el envío tradicional
         const formData = new FormData(this);
 
-        fetch('/php/guardar_comentario.php', {
+        fetch('php/guardar_comentario.php', {
             method: 'POST',
             body: formData
         })
