@@ -1,10 +1,8 @@
 :root {
     /* Variables para Alturas Fijas de la Cabecera */
     --top-bar-height: 42px; 
-    /* Estimado: top-bar tiene un padding vertical de 0.5rem (aprox 8px) en cada lado + contenido. Usamos 42px. */
     --header-main-height: 113px;
-    /* Estimado: 1rem (padding sup) + 80px (logo) + 1rem (padding inf) + padding/margen internos. Usamos 113px para llegar a 155px total. */
-    --total-header-space: 155px; /* Altura total para evitar que el contenido quede bajo las barras */
+    --total-header-space: 155px;
 }
 
 * {
@@ -30,8 +28,8 @@ body {
     width: 100%;
     z-index: 1000;
     top: 0;
-    height: var(--top-bar-height); /* Altura fijada por la variable */
-    box-sizing: content-box; /* Asegura que el padding no afecte el cálculo total de altura si se usa esta variable en otros lados */
+    height: var(--top-bar-height); 
+    box-sizing: content-box; 
 }
         
 .top-bar a {
@@ -75,7 +73,7 @@ header {
     align-items: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
-    top: var(--top-bar-height); /* Usa la variable para posicionar debajo de la barra superior */
+    top: var(--top-bar-height); 
     z-index: 999;
     width: 100%;
 }
@@ -129,13 +127,11 @@ header {
     padding: 0.5rem;
 }
         
-/* Navigation - MODIFICADO para transición de menú móvil */
+/* Navigation */
 nav {
     display: flex;
     gap: 2rem;
     position: relative;
-
-    /* Estilos para transición móvil (Desktop: no se aplica porque se sobrescribe) */
     max-height: none;
     overflow: visible;
     transition: none;
@@ -213,13 +209,13 @@ nav a:hover::after {
     display: block;
 }
         
-/* Carrusel - MODIFICADO para usar variable */
+/* Carrusel */
 .carousel-container {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    margin-top: var(--total-header-space); /* Usa la variable */
+    margin-top: var(--total-header-space);
 }
         
 .carousel-slide {
@@ -841,7 +837,7 @@ h2::after {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    max-width: 900px; /* Ancho suficiente para las dos columnas */
+    max-width: 900px; 
     width: 90%;
     position: relative;
     animation: zoomIn 0.3s;
@@ -871,19 +867,19 @@ h2::after {
 /* ========================================= */
 
 .modal-split-content {
-    display: flex; /* Habilita el diseño de lado a lado */
-    gap: 30px; /* Espacio entre las columnas */
-    align-items: center; /* Centra verticalmente el contenido */
+    display: flex; 
+    gap: 30px; 
+    align-items: center; 
 }
 
 .modal-column {
-    flex: 1; /* Ambas columnas toman el mismo espacio (50%/50%) */
+    flex: 1; 
     padding: 0;
 }
 
 /* Columna de Admisión: Asegura la alineación */
 .modal-admision {
-    text-align: center; /* Centra el texto de Admisión */
+    text-align: center; 
 }
 
 .vacaciones-img {
@@ -891,16 +887,15 @@ h2::after {
     height: auto;
     display: block;
     border-radius: 8px; 
-    /* Si la imagen ya tiene la forma, puedes dejarla así */
 }
 
 
 /* ========================================= */
-/* ESTILOS DEL CONTENIDO DE ADMISIÓN */
+/* ESTILOS DEL CONTENIDO DE ADMISIÓN (CORRECCIÓN CONTRASTE) */
 /* ========================================= */
 .modal-title {
     color: #004080;
-    font-size: 2rem; /* Ajustado para el espacio más reducido */
+    font-size: 2rem; 
     margin-bottom: 5px;
 }
 
@@ -912,7 +907,7 @@ h2::after {
 .modal-subtitle {
     color: #555;
     font-size: 1rem;
-    margin-bottom: 20px; /* Reducido un poco */
+    margin-bottom: 20px; 
     border-bottom: 2px solid #eee;
     padding-bottom: 15px;
 }
@@ -921,7 +916,7 @@ h2::after {
     display: flex;
     justify-content: space-around;
     gap: 10px;
-    margin-bottom: 20px; /* Reducido un poco */
+    margin-bottom: 20px; 
 }
 
 .nivel-item {
@@ -929,7 +924,7 @@ h2::after {
     border: 1px solid #ddd;
     border-radius: 8px;
     flex-grow: 1;
-    text-align: center; /* Asegura que el texto esté centrado en el item */
+    text-align: center; 
 }
 
 .nivel-item h3 {
@@ -940,8 +935,9 @@ h2::after {
 }
 
 .nivel-item p {
+    /* Corregido el contraste de color del texto */
     font-size: 0.85rem;
-    color: #777;
+    color: #444; 
     margin: 0;
 }
 
@@ -992,19 +988,23 @@ footer {
 }
         
 footer a {
-    color: #ffffff;
+    color: #a0c4ff;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
-/* ========================================= */
-/* MEDIA QUERY PARA DISPOSITIVOS MÓVILES */
-/* ========================================= */
+/* ➡️ CORRECCIÓN ACCESIBILIDAD: Subrayado al pasar el cursor para distinguir los enlaces */
+footer a:hover {
+    color: #fff; /* Opcional: hace que el hover sea más visible */
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     /* AJUSTE DE VARIABLES PARA MÓVIL */
     :root {
-        --top-bar-height: 38px; /* Altura estimada de la barra superior en móvil */
-        --header-main-height: 60px; /* Altura estimada del header principal en móvil */
-        --total-header-space: 98px; /* 38px + 60px = 98px (mantenemos la coherencia) */
+        --top-bar-height: 38px; 
+        --header-main-height: 60px;
+        --total-header-space: 98px; 
     }
 
     /* Top bar responsive */
@@ -1023,7 +1023,7 @@ footer a {
     header {
         padding: 0.8rem 3%;
         flex-wrap: wrap;
-        top: var(--top-bar-height); /* Usa la nueva variable móvil (38px) */
+        top: var(--top-bar-height); 
     }
     
     /* Logo más pequeño en móvil */
@@ -1050,26 +1050,23 @@ footer a {
         order: 3;
     }
     
-    /* Menú de navegación en móvil - IMPLEMENTANDO TRANSICIÓN */
+    /* Menú de navegación en móvil - TRANSICIÓN */
     nav {
-        /* Se mantiene display: flex; para que los hijos se organicen verticalmente */
         width: 100%;
         flex-direction: column;
         gap: 0;
         background: #510488;
         order: 4;
         margin-top: 0.5rem;
-
-        /* Transición para el efecto de desplegable */
-        max-height: 0; /* Oculto por defecto */
+        max-height: 0; 
         overflow: hidden;
         padding: 0;
         transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
     }
     
     nav.active {
-        display: flex; /* Asegura que se despliegue */
-        max-height: 500px; /* Altura máxima suficiente */
+        display: flex; 
+        max-height: 500px; 
         padding: 1rem 0;
     }
     
@@ -1105,7 +1102,7 @@ footer a {
     /* Carrusel móvil - USA LA NUEVA VARIABLE */
     .carousel-container {
         height: 300px;
-        margin-top: var(--total-header-space); /* Usa la nueva variable móvil (98px) */
+        margin-top: var(--total-header-space); 
     }
     
     /* Contenido principal */
@@ -1216,7 +1213,7 @@ footer a {
     
     /* Hace que las columnas del modal se apilen (uno encima del otro) */
     .modal-split-content {
-        flex-direction: column-reverse; /* Pone la imagen ARRIBA y la Admisión ABAJO */
+        flex-direction: column-reverse; 
         gap: 20px;
     }
 
