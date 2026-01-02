@@ -320,7 +320,7 @@
                 <p><a href="https://wa.link/96i7bl" target="_blank">WhatsApp</a></p>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 2rem; border-top: 1px solid #004080; padding-top: 1rem;">
+        <p style="text-align: center; margin-top: 2rem; border-top: 1px solid #ffffff; padding-top: 1rem;">
             &copy; 2025 Colegio San Isidro. Todos los derechos reservados. <a href="https://web.facebook.com/profile.php?id=100068788753920" target="_blank">Computer Science</a>
         </p>
     </footer>

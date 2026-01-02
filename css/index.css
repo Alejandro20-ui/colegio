@@ -1,3 +1,12 @@
+:root {
+    /* Variables para Alturas Fijas de la Cabecera */
+    --top-bar-height: 42px; 
+    /* Estimado: top-bar tiene un padding vertical de 0.5rem (aprox 8px) en cada lado + contenido. Usamos 42px. */
+    --header-main-height: 113px;
+    /* Estimado: 1rem (padding sup) + 80px (logo) + 1rem (padding inf) + padding/margen internos. Usamos 113px para llegar a 155px total. */
+    --total-header-space: 155px; /* Altura total para evitar que el contenido quede bajo las barras */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +30,8 @@ body {
     width: 100%;
     z-index: 1000;
     top: 0;
+    height: var(--top-bar-height); /* Altura fijada por la variable */
+    box-sizing: content-box; /* Asegura que el padding no afecte el cálculo total de altura si se usa esta variable en otros lados */
 }
         
 .top-bar a {
@@ -64,7 +75,7 @@ header {
     align-items: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: fixed;
-    top: 42px;
+    top: var(--top-bar-height); /* Usa la variable para posicionar debajo de la barra superior */
     z-index: 999;
     width: 100%;
 }
@@ -118,11 +129,16 @@ header {
     padding: 0.5rem;
 }
         
-/* Navigation */
+/* Navigation - MODIFICADO para transición de menú móvil */
 nav {
     display: flex;
     gap: 2rem;
     position: relative;
+
+    /* Estilos para transición móvil (Desktop: no se aplica porque se sobrescribe) */
+    max-height: none;
+    overflow: visible;
+    transition: none;
 }
         
 nav a {
@@ -197,13 +213,13 @@ nav a:hover::after {
     display: block;
 }
         
-/* Carrusel */
+/* Carrusel - MODIFICADO para usar variable */
 .carousel-container {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
     overflow: hidden;
-    margin-top: 155px;
+    margin-top: var(--total-header-space); /* Usa la variable */
 }
         
 .carousel-slide {
@@ -976,11 +992,21 @@ footer {
 }
         
 footer a {
-    color: #ffffff;
+    color: #a0c4ff;
     text-decoration: none;
 }
 
+/* ========================================= */
+/* MEDIA QUERY PARA DISPOSITIVOS MÓVILES */
+/* ========================================= */
 @media (max-width: 768px) {
+    /* AJUSTE DE VARIABLES PARA MÓVIL */
+    :root {
+        --top-bar-height: 38px; /* Altura estimada de la barra superior en móvil */
+        --header-main-height: 60px; /* Altura estimada del header principal en móvil */
+        --total-header-space: 98px; /* 38px + 60px = 98px (mantenemos la coherencia) */
+    }
+
     /* Top bar responsive */
     .top-bar {
         padding: 0.4rem 3%;
@@ -997,7 +1023,7 @@ footer a {
     header {
         padding: 0.8rem 3%;
         flex-wrap: wrap;
-        top: 38px;
+        top: var(--top-bar-height); /* Usa la nueva variable móvil (38px) */
     }
     
     /* Logo más pequeño en móvil */
@@ -1024,20 +1050,27 @@ footer a {
         order: 3;
     }
     
-    /* Menú de navegación en móvil */
+    /* Menú de navegación en móvil - IMPLEMENTANDO TRANSICIÓN */
     nav {
-        display: none;
+        /* Se mantiene display: flex; para que los hijos se organicen verticalmente */
         width: 100%;
         flex-direction: column;
         gap: 0;
         background: #510488;
         order: 4;
-        padding: 1rem 0;
         margin-top: 0.5rem;
+
+        /* Transición para el efecto de desplegable */
+        max-height: 0; /* Oculto por defecto */
+        overflow: hidden;
+        padding: 0;
+        transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
     }
     
     nav.active {
-        display: flex;
+        display: flex; /* Asegura que se despliegue */
+        max-height: 500px; /* Altura máxima suficiente */
+        padding: 1rem 0;
     }
     
     nav a {
@@ -1069,10 +1102,10 @@ footer a {
         padding-left: 2rem;
     }
     
-    /* Carrusel móvil */
+    /* Carrusel móvil - USA LA NUEVA VARIABLE */
     .carousel-container {
         height: 300px;
-        margin-top: 98px;
+        margin-top: var(--total-header-space); /* Usa la nueva variable móvil (98px) */
     }
     
     /* Contenido principal */
@@ -1181,7 +1214,7 @@ footer a {
         max-width: 95%;
     }
     
-    /* Hace que las columnas se apilen (uno encima del otro) */
+    /* Hace que las columnas del modal se apilen (uno encima del otro) */
     .modal-split-content {
         flex-direction: column-reverse; /* Pone la imagen ARRIBA y la Admisión ABAJO */
         gap: 20px;
@@ -1195,8 +1228,4 @@ footer a {
     .modal-niveles {
         flex-direction: column;
     }
-    footer a {
-    color: #ffffff;
-    text-decoration: none;
-}
 }
