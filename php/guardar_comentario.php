@@ -1,6 +1,5 @@
 <?php
 require_once '../backend/conexion.php';
-$conn = $conn;
 
 if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);

@@ -1,6 +1,5 @@
 <?php
 require_once '../backend/conexion.php';
-$conn = $conn;
 
 $orden = $_GET['orden'] ?? 'nuevo';
 $order_sql = ($orden === 'antiguo') ? 'ASC' : 'DESC';
