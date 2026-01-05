@@ -79,22 +79,38 @@
     </header>
     
     <div class="carousel-container">
+        <!-- Primera imagen - LCP optimizada con fetchpriority="high" -->
         <div class="carousel-slide active">
             <img src="../img/flayer.webp" 
-            alt="Estudiantes de San Isidro - Educa para el éxito"
-            fetchpriority="high"
-            width="1600" 
-            height="900"> </div>
+                alt="Estudiantes de San Isidro - Educa para el éxito"
+                fetchpriority="high"
+                width="1600" 
+                height="900"
+                style="display: block;">
+        </div>
+        
+        <!-- Resto de imágenes con loading="lazy" -->
         <div class="carousel-slide">
-            <img src="../img/innovacion.webp" alt="Instalaciones modernas" loading="lazy" width="1600" height="900"> </div>
+            <img src="../img/innovacion.webp" 
+                alt="Instalaciones modernas" 
+                loading="lazy" 
+                width="1600" 
+                height="900">
+        </div>
         <div class="carousel-slide">
-            <img src="../img/pinturaele.webp" alt="Actividades educativas" loading="lazy" width="1600" height="900"> </div>
+            <img src="../img/pinturaele.webp" 
+                alt="Actividades educativas" 
+                loading="lazy" 
+                width="1600" 
+                height="900">
+        </div>
         <div class="carousel-slide">
             <img src="../img/formacion.webp" 
                 alt="Formación integral" 
-                fetchpriority="high"
+                loading="lazy"
                 width="1600" 
-                height="900"> </div>
+                height="900">
+        </div>
         
         <div class="carousel-indicators">
             <span class="indicator active" data-slide="0"></span>
@@ -194,45 +210,46 @@
 
         <section id="eventos">
             <h2>Eventos</h2>
-            <div class="carousel-container">
-            <!-- Primera imagen - LCP optimizada con fetchpriority="high" -->
-                <div class="carousel-slide active">
-                    <img src="../img/flayer.webp" 
-                        alt="Estudiantes de San Isidro - Educa para el éxito"
-                        fetchpriority="high"
-                        width="1600" 
-                        height="900"
-                        style="display: block;">
+            <div class="eventos-carousel-container">
+                <button class="eventos-nav prev" aria-label="Anterior">‹</button>
+                <button class="eventos-nav next" aria-label="Siguiente">›</button>
+                
+                <div class="eventos-grid">
+                    <a href="https://web.facebook.com/share/p/1Ko7t1Mwo3/" target="_blank" class="evento-card">
+                        <div class="evento-image">
+                            <img src="../img/pasacalleeducacioninicial.webp" alt="Semana de la Educación Inicial 2025" loading="lazy" width="400" height="300">
+                        </div>
+                        <h3>Semana de la Educación Inicial 2025</h3>
+                    </a>
+                    <a href="https://web.facebook.com/share/p/1G6mBiNvrD/" target="_blank" class="evento-card">
+                        <div class="evento-image">
+                            <img src="../img/kermesse.webp" alt="kermess 2025" loading="lazy" width="400" height="300">
+                        </div>
+                        <h3>Kermess 2025</h3>
+                    </a>
+                    <a href="https://web.facebook.com/share/p/16Jd4irmRv/" target="_blank" class="evento-card">
+                        <div class="evento-image">
+                            <img src="../img/olimpiadasacademicas.webp" alt="Olimpiadas Academicas 2025" loading="lazy" width="400" height="300">
+                        </div>
+                        <h3>Olimpiadas Academicas</h3>
+                    </a>
+                    <a href="https://web.facebook.com/share/p/1H17ygVNiK/" target="_blank" class="evento-card">
+                        <div class="evento-image">
+                            <img src="../img/alimpiadas.webp" alt="Olimpiadas 2025" loading="lazy" width="400" height="300">
+                        </div>
+                        <h3>Olimpiadas 2025</h3>
+                    </a>
+                    <a href="https://web.facebook.com/share/p/17JumLPHbU/" target="_blank" class="evento-card">
+                        <div class="evento-image">
+                            <img src="../img/OLIMPIADASPADRES.webp" alt="Olimpadres 2025" loading="lazy" width="400" height="300">
+                        </div>
+                        <h3>Olimpadres 2025</h3>
+                    </a>
                 </div>
-            
-            <!-- Resto de imágenes con loading="lazy" -->
-                <div class="carousel-slide">
-                    <img src="../img/innovacion.webp" 
-                        alt="Instalaciones modernas" 
-                        loading="lazy" 
-                        width="1600" 
-                        height="900">
-                </div>
-                <div class="carousel-slide">
-                    <img src="../img/pinturaele.webp" 
-                        alt="Actividades educativas" 
-                        loading="lazy" 
-                        width="1600" 
-                        height="900">
-                </div>
-                <div class="carousel-slide">
-                    <img src="../img/formacion.webp" 
-                        alt="Formación integral" 
-                        loading="lazy"
-                        width="1600" 
-                        height="900">
-                </div>
-            
-                <div class="carousel-indicators">
-                    <span class="indicator active" data-slide="0"></span>
-                    <span class="indicator" data-slide="1"></span>
-                    <span class="indicator" data-slide="2"></span>
-                    <span class="indicator" data-slide="3"></span>
+                
+                <div class="eventos-indicators">
+                    <span class="eventos-dot active"></span>
+                    <span class="eventos-dot"></span>
                 </div>
             </div>
         </section>
