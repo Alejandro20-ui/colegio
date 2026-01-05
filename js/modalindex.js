@@ -1,4 +1,3 @@
-// modalindex.js - Versión corregida SIN manipular body (previene CLS)
 
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('modalAdmision');
