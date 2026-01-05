@@ -988,15 +988,14 @@ footer {
 }
         
 footer a {
-    color: #a0c4ff;
-    text-decoration: none;
-    transition: color 0.3s;
+    color: #ffffff;
+    text-decoration: underline;
+    transition: color 0.3s, opacity 0.3s;
 }
 
 /* ➡️ CORRECCIÓN ACCESIBILIDAD: Subrayado al pasar el cursor para distinguir los enlaces */
 footer a:hover {
-    color: #fff; /* Opcional: hace que el hover sea más visible */
-    text-decoration: underline;
+    opacity: 0.8;
 }
 
 @media (max-width: 768px) {
