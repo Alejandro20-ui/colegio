@@ -324,18 +324,24 @@
             &copy; 2025 Colegio San Isidro. Todos los derechos reservados. <a href="https://web.facebook.com/profile.php?id=100068788753920" target="_blank">Computer Science</a>
         </p>
     </footer>
-    <div id="modalAdmision" class="modal">
+    <div id="modalAdmision" class="modal" style="display: none;">
         <div class="modal-content">
             <span class="close-button" aria-label="Cerrar Modal">&times;</span>
             
             <div class="modal-split-content">
-
+                <!-- Columna de Vacaciones con dimensiones explícitas -->
                 <div class="modal-column modal-vacaciones">
                     <a href="../vacaciones.html" aria-label="Ver detalles de Vacaciones Útiles 2026">
-                        <img src="../img/vacaciones.webp" alt="Vacaciones Útiles 2026 CSI Colegio San Isidro" class="vacaciones-img" loading="lazy" width="300" height="400">
+                        <img src="../img/vacaciones.webp" 
+                            alt="Vacaciones Útiles 2026 CSI Colegio San Isidro" 
+                            class="vacaciones-img" 
+                            loading="lazy" 
+                            width="300" 
+                            height="400">
                     </a>
                 </div>
                 
+                <!-- Columna de Admisión -->
                 <div class="modal-column modal-admision">
                     <div class="modal-body">
                         <h2 class="modal-title">¡Matrícula <span class="year">2026</span> Abierta!</h2>

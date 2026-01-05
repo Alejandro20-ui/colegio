@@ -1,32 +1,63 @@
+// modalindex.js - Versión corregida para prevenir CLS
+
 document.addEventListener('DOMContentLoaded', function() {
-            var modal = document.getElementById('modalAdmision');
-            var closeBtn = document.querySelector('.close-button');
-            var ctaBtn = document.getElementById('modalCtaButton');
+    const modal = document.getElementById('modalAdmision');
+    const closeButton = document.querySelector('.close-button');
+    const modalCtaButton = document.getElementById('modalCtaButton');
 
-            // 1. Mostrar el modal automáticamente
-            modal.style.display = 'flex'; 
+    // Función para mostrar el modal
+    function showModal() {
+        modal.classList.add('show');
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevenir scroll
+    }
 
-            // 2. Cerrar al hacer clic en el botón X
-            closeBtn.onclick = function() {
-                modal.style.display = 'none';
-            }
+    // Función para cerrar el modal
+    function closeModal() {
+        modal.classList.remove('show');
+        modal.style.display = 'none';
+        document.body.style.overflow = ''; // Restaurar scroll
+        
+        // Guardar en localStorage que ya se mostró
+        localStorage.setItem('modalShown', 'true');
+    }
 
-            // 3. Cerrar al hacer clic fuera del modal
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = 'none';
-                }
-            }
-            
-            // 4. Cerrar al hacer clic en el botón CTA
-            ctaBtn.onclick = function() {
-                modal.style.display = 'none';
-            }
-            
-            // Opcional: Si quieres que el botón CTA también lleve a la sección de Admisión
-            // ctaBtn.addEventListener('click', function() {
-            //     modal.style.display = 'none';
-            //     // Desplazamiento suave a la sección de admisión (si es necesario)
-            //     document.getElementById('admision').scrollIntoView({ behavior: 'smooth' });
-            // });
+    // Verificar si el modal ya se mostró antes
+    const modalShown = localStorage.getItem('modalShown');
+    
+    // Mostrar modal solo si no se ha mostrado antes
+    // Y después de que la página se haya cargado completamente
+    if (!modalShown) {
+        // Esperar a que todo esté cargado para prevenir CLS
+        window.addEventListener('load', function() {
+            // Pequeño delay adicional para asegurar estabilidad
+            setTimeout(showModal, 500);
         });
+    }
+
+    // Cerrar modal al hacer clic en la X
+    if (closeButton) {
+        closeButton.addEventListener('click', closeModal);
+    }
+
+    // Cerrar modal al hacer clic fuera del contenido
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Cerrar modal con tecla Escape
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+
+    // Cuando se hace clic en el botón del modal
+    if (modalCtaButton) {
+        modalCtaButton.addEventListener('click', function() {
+            closeModal();
+        });
+    }
+});
