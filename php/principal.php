@@ -57,22 +57,22 @@
         </button>
 
         <nav>
-            <a href="../institucion.html">Institucional</a>
-            <a href="../admision.html">Admisión</a>
-            <a href="../vacaciones.html">Vacaciones utiles</a>
+            <a href="../institucion">Institucional</a>
+            <a href="../admision">Admisión</a>
+            <a href="../vacaciones">Vacaciones utiles</a>
             <div class="dropdown">
                 <button class="dropbtn">Propuesta Educativa</button>
                 <div class="dropdown-content">
-                    <a href="../talleres.html">Talleres</a>
-                    <a href="../actividades.html">Actividades</a>
+                    <a href="../talleres">Talleres</a>
+                    <a href="../actividades">Actividades</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Niveles Educativos</button>
                 <div class="dropdown-content">
-                    <a href="../inicial.html">Inicial</a>
-                    <a href="../primaria.html">Primaria</a>
-                    <a href="../secundaria.html">Secundaria</a>
+                    <a href="../inicial">Inicial</a>
+                    <a href="../primaria">Primaria</a>
+                    <a href="../secundaria">Secundaria</a>
                 </div>
             </div>
         </nav>
