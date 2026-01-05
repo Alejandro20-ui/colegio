@@ -991,6 +991,10 @@ footer a {
     color: #ffffff;
     text-decoration: underline;
     transition: color 0.3s, opacity 0.3s;
+    display: inline-block;
+    min-height: 44px;
+    line-height: 44px;
+    padding: 0 4px;
 }
 
 /* ➡️ CORRECCIÓN ACCESIBILIDAD: Subrayado al pasar el cursor para distinguir los enlaces */
