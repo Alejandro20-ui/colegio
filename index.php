@@ -383,8 +383,8 @@
             </div>
             <div>
                 <h3>Enlaces Rápidos</h3>
-                <p><a href="../institucion.html">Sobre Nosotros</a></p>
-                <p><a href="../admision.html">Admisión</a></p>
+                <p><a href="institucion.html">Sobre Nosotros</a></p>
+                <p><a href="admision.html">Admisión</a></p>
             </div>
             <div>
                 <h3>Síguenos</h3>
@@ -404,8 +404,8 @@
             <div class="modal-split-content">
                 <!-- Columna de Vacaciones con dimensiones explícitas -->
                 <div class="modal-column modal-vacaciones">
-                    <a href="../vacaciones.html" aria-label="Ver detalles de Vacaciones Útiles 2026">
-                        <img src="../img/vacaciones.webp" 
+                    <a href="vacaciones.html" aria-label="Ver detalles de Vacaciones Útiles 2026">
+                        <img src="img/vacaciones.webp" 
                             alt="Vacaciones Útiles 2026 CSI Colegio San Isidro" 
                             class="vacaciones-img" 
                             loading="lazy" 
@@ -435,7 +435,7 @@
                             </div>
                         </div>
 
-                        <a href="../admision.html" class="modal-cta-button" id="modalCtaButton">
+                        <a href="admision.html" class="modal-cta-button" id="modalCtaButton">
                             Ver Proceso de Admisión
                         </a>
                     </div>
