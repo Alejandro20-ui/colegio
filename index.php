@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
 
     <!-- TITLE OPTIMIZADO (MUY IMPORTANTE) -->
     <title>Colegio San Isidro Ica | Inicial, Primaria y Secundaria | Matrícula 2026</title>
