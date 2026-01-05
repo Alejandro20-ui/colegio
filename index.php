@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/video.css">
 
     <!-- TITLE OPTIMIZADO (MUY IMPORTANTE) -->
     <title>Colegio San Isidro Ica | Inicial, Primaria y Secundaria | Matrícula 2026</title>
@@ -72,9 +73,9 @@
 <body>
 
     <div class="top-bar">
-        <a href="../pdf/solicitud.pdf" target="_blank" >SOLICITUD</a>
+        <a href="pdf/solicitud.pdf" target="_blank" >SOLICITUD</a>
         <a href="https://colegiosanisidro.siaded.com/Account/Login" target="_blank">AULA VIRTUAL</a>
-        <a href="../pdf/RECLAMACIONES.pdf" target="_blank">LIBRO DE RECLAMACIONES</a>
+        <a href="pdf/RECLAMACIONES.pdf" target="_blank">LIBRO DE RECLAMACIONES</a>
         <div class="social-icons">
             <a href="https://www.facebook.com/share/179SLzceE1/" target="_blank" aria-label="Facebook">
                 <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
@@ -97,7 +98,7 @@
     <header>
         <a href="#" class="logo-link">
             <div class="logo-container">
-                <img src="../img/logocolegioprin.webp" 
+                <img src="img/logocolegioprin.webp" 
                     alt="Logo San Isidro" 
                     width="100" 
                     height="110"> <div class="logo-text">
@@ -113,22 +114,22 @@
         </button>
 
         <nav>
-            <a href="../institucion">Institucional</a>
-            <a href="../admision">Admisión</a>
-            <a href="../vacaciones">Vacaciones utiles</a>
+            <a href="institucion.html">Institucional</a>
+            <a href="admision.html">Admisión</a>
+            <a href="vacaciones.html">Vacaciones utiles</a>
             <div class="dropdown">
                 <button class="dropbtn">Propuesta Educativa</button>
                 <div class="dropdown-content">
-                    <a href="../talleres">Talleres</a>
-                    <a href="../actividades">Actividades</a>
+                    <a href="talleres.html">Talleres</a>
+                    <a href="actividades.html">Actividades</a>
                 </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Niveles Educativos</button>
                 <div class="dropdown-content">
-                    <a href="../inicial">Inicial</a>
-                    <a href="../primaria">Primaria</a>
-                    <a href="../secundaria">Secundaria</a>
+                    <a href="inicial.html">Inicial</a>
+                    <a href="primaria.html">Primaria</a>
+                    <a href="secundaria.html">Secundaria</a>
                 </div>
             </div>
         </nav>
@@ -137,7 +138,7 @@
     <div class="carousel-container">
         <!-- Primera imagen - LCP optimizada con fetchpriority="high" -->
         <div class="carousel-slide active">
-            <img src="../img/flayer.webp" 
+            <img src="img/flayer.webp" 
                 alt="Estudiantes de San Isidro - Educa para el éxito"
                 fetchpriority="high"
                 width="1600" 
@@ -147,21 +148,21 @@
         
         <!-- Resto de imágenes con loading="lazy" -->
         <div class="carousel-slide">
-            <img src="../img/innovacion.webp" 
+            <img src="img/innovacion.webp" 
                 alt="Instalaciones modernas" 
                 loading="lazy" 
                 width="1600" 
                 height="900">
         </div>
         <div class="carousel-slide">
-            <img src="../img/pinturaele.webp" 
+            <img src="img/pinturaele.webp" 
                 alt="Actividades educativas" 
                 loading="lazy" 
                 width="1600" 
                 height="900">
         </div>
         <div class="carousel-slide">
-            <img src="../img/formacion.webp" 
+            <img src="img/formacion.webp" 
                 alt="Formación integral" 
                 loading="lazy"
                 width="1600" 
@@ -442,18 +443,18 @@
             </div>
         </div>
     </div>
-    <script defer src="../js/youtube-lazy.js"></script>
-    <script defer src="../js/menu.js"></script>
-    <script defer src="../js/carrusel.js"></script>
-    <script defer src="../js/carruselindex.js"></script>
-    <script defer src="../js/modalindex.js"></script>
-    <script defer src="../js/comentarios.js"></script>
+    <script defer src="js/youtube-lazy.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/carrusel.js"></script>
+    <script defer src="js/carruselindex.js"></script>
+    <script defer src="js/modalindex.js"></script>
+    <script defer src="js/comentarios.js"></script>
     
      <Script de Lazy Load para comentarios --t>
         // Este script inline (Lazy Load del script de Comentarios) está CORRECTO. 
         // Se carga de forma no bloqueante solo cuando el usuario se acerca a la sección de comentarios.
         const comentariosSection = document.getElementById('comentarios');
-        const scriptUrl = '../js/comentarios.js';
+        const scriptUrl = 'js/comentarios.js';
         let scriptLoaded = false;
 
         const observer = new IntersectionObserver((entries, observer) => {
