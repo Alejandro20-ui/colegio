@@ -7,16 +7,18 @@ RewriteCond %{THE_REQUEST} /index\.html [NC]
 RewriteRule ^index\.html$ / [R=301,L]
 
 # ========================================
-# 2️⃣ HOME LIMPIA (INTERNA)
-# ========================================
-RewriteRule ^$ php/principal.php [L]
-
-# ========================================
-# 3️⃣ OCULTAR ACCESO DIRECTO A /php/
+# 2️⃣ OCULTAR ACCESO DIRECTO A /php/
 # (SOLO SI LO PIDEN DESDE EL NAVEGADOR)
 # ========================================
 RewriteCond %{THE_REQUEST} \s/php/ [NC]
 RewriteRule ^php/ - [F,L]
+
+# ========================================
+# 3️⃣ HOME LIMPIA (INTERNA - SIN MOSTRAR EN URL)
+# ========================================
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^$ php/principal.php [L]
 
 # ========================================
 # 4️⃣ URLs AMIGABLES PARA HTML
