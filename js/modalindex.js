@@ -1,4 +1,4 @@
-// modalindex.js - Versión corregida para prevenir CLS
+// modalindex.js - Versión corregida SIN manipular body (previene CLS)
 
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('modalAdmision');
@@ -9,14 +9,13 @@ document.addEventListener('DOMContentLoaded', function() {
     function showModal() {
         modal.classList.add('show');
         modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Prevenir scroll
+        // NO manipular body.style.overflow - causa CLS
     }
 
     // Función para cerrar el modal
     function closeModal() {
         modal.classList.remove('show');
         modal.style.display = 'none';
-        document.body.style.overflow = ''; // Restaurar scroll
         
         // Guardar en localStorage que ya se mostró
         localStorage.setItem('modalShown', 'true');
@@ -26,12 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalShown = localStorage.getItem('modalShown');
     
     // Mostrar modal solo si no se ha mostrado antes
-    // Y después de que la página se haya cargado completamente
     if (!modalShown) {
-        // Esperar a que todo esté cargado para prevenir CLS
+        // Esperar a que la imagen LCP se cargue primero
         window.addEventListener('load', function() {
-            // Pequeño delay adicional para asegurar estabilidad
-            setTimeout(showModal, 500);
+            setTimeout(showModal, 1000); // Delay de 1 segundo
         });
     }
 
