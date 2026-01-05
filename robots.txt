@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-# NO bloquear /php/ porque principal.php es visible
-# Solo bloquea carpetas internas si existen
-Disallow: /backend/
-
-Sitemap: https://csi.edu.pe/sitemap.xml
+Sitemap: https://www.csi.edu.pe/sitemap.xml

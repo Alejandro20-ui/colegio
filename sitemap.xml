@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- HOME -->
-  <url>
-    <loc>https://csi.edu.pe/index.html</loc>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- PÁGINA PRINCIPAL DINÁMICA -->
-  <url>
-    <loc>https://csi.edu.pe/php/principal.php</loc>
-    <priority>1.0</priority>
-  </url>
+<url>
+  <loc>https://www.csi.edu.pe/</loc>
+  <priority>1.0</priority>
+</url>
 
   <!-- SECCIONES -->
   <url>

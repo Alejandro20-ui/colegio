@@ -1,18 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colegio San Isidro - Educación de Calidad en Ica</title>
-    <link rel="icon" type="image/webp" href="../img/icono.webp">
-     <meta name="description" content="Colegio San Isidro en Ica. Educación inicial, primaria y secundaria con excelencia académica. Matrícula 2026 abierta. Contáctanos hoy.">
-    
-    <link rel="stylesheet" href="../css/index.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/video.css" media="print" onload="this.media='all'">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-</head>
+
+    <!-- TITLE OPTIMIZADO (MUY IMPORTANTE) -->
+    <title>Colegio San Isidro Ica | Inicial, Primaria y Secundaria | Matrícula 2026</title>
+
+    <link rel="icon" type="image/png" href="img/icono.webp">
+    <link rel="apple-touch-icon" href="img/icono.webp">
+    <meta name="google-site-verification" content="kl1Jd-2ozsH2p1Xb4w9M_wVaCLx_q2dCTjDD5gB1enw" />
+    <!-- META DESCRIPTION OPTIMIZADA -->
+    <meta name="description" content="Colegio San Isidro en Ica. Educación inicial, primaria y secundaria con excelencia académica. Matrícula 2026 abierta. Contáctanos hoy.">
+
+    <!-- KEYWORDS (YA NO TAN USADO, PERO AYUDA UN POCO) -->
+    <meta name="keywords" content="
+        colegio san isidro,
+        colegio san isidro ica,
+        colegio san isidro-ica,
+        colegio san isidro inicial,
+        colegio san isidro primaria,
+        colegio san isidro secundaria,
+        mejor colegio de ica,
+        colegios en ica
+    ">
+
+    <meta name="author" content="Colegio San Isidro Ica">
+
+    <!-- URL CANÓNICA -->
+    <link rel="canonical" href="https://www.csi.edu.pe/">
+
+    <!-- OPEN GRAPH (REDES SOCIALES) -->
+    <meta property="og:title" content="Colegio San Isidro Ica | Educación Inicial, Primaria y Secundaria">
+    <meta property="og:description" content="Institución educativa líder en Ica. Matrícula 2026 abierta.">
+    <meta property="og:image" content="https://www.csi.edu.pe/img/icono.webp">
+    <meta property="og:url" content="https://www.csi.edu.pe/">
+    <meta property="og:type" content="website">
+
+    <!-- SCHEMA.ORG OPTIMIZADO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Colegio San Isidro",
+      "alternateName": [
+        "Colegio San Isidro Ica",
+        "Colegio San Isidro-ICA"
+      ],
+      "description": "Colegio San Isidro en Ica que brinda educación inicial, primaria y secundaria.",
+      "url": "https://www.csi.edu.pe",
+      "logo": "https://www.csi.edu.pe/img/icono.webp",
+      "image": "https://www.csi.edu.pe/img/icono.webp",
+      "telephone": "+51 978785398",
+      "email": "colegiosanisidro@csi.edu.pe",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Cardos L 22 Urb. San Isidro",
+        "addressLocality": "Ica",
+        "addressRegion": "Ica",
+        "addressCountry": "PE"
+      },
+      "sameAs": [
+        "https://www.facebook.com/share/179SLzceE1/",
+        "https://www.tiktok.com/@colegiosanisidro"
+      ]
+    }
+    </script>
 <body>
 
     <div class="top-bar">
