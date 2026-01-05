@@ -1,40 +1,34 @@
 RewriteEngine On
 
 # ========================================
-# 1️⃣ HOME LIMPIA (sin index ni php)
+# 1️⃣ REDIRECCIÓN LIMPIA DEL INDEX
 # ========================================
-RewriteRule ^$ php/principal.php [L]
-
-# Redirigir index.html a /
 RewriteCond %{THE_REQUEST} /index\.html [NC]
 RewriteRule ^index\.html$ / [R=301,L]
 
 # ========================================
-# 2️⃣ OCULTAR .php Y CARPETA /php
+# 2️⃣ HOME LIMPIA (INTERNA)
 # ========================================
+RewriteRule ^$ php/principal.php [L]
 
-# Bloquear acceso directo a archivos PHP
+# ========================================
+# 3️⃣ OCULTAR ACCESO DIRECTO A /php/
+# (SOLO SI LO PIDEN DESDE EL NAVEGADOR)
+# ========================================
 RewriteCond %{THE_REQUEST} \s/php/ [NC]
 RewriteRule ^php/ - [F,L]
 
-# Permitir ejecución interna de PHP
-RewriteRule ^principal$ php/principal.php [L]
-
 # ========================================
-# 3️⃣ URLs AMIGABLES PARA HTML
+# 4️⃣ URLs AMIGABLES PARA HTML
 # ========================================
-
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([a-zA-Z0-9_-]+)$ $1.html [L]
 
 # ========================================
-# 4️⃣ SEGURIDAD BÁSICA EXTRA
+# 5️⃣ SEGURIDAD EXTRA
 # ========================================
-
-# Evitar listar carpetas
 Options -Indexes
 
-# Proteger archivos sensibles
 <FilesMatch "(conexion|config_db)\.php">
     Require all denied
 </FilesMatch>
